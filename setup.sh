@@ -9,7 +9,7 @@ echo "✅ Create Gatekeeper"
 
 # mountme
 minikube ssh -- mkdir -p /home/docker/mountme1
-scp -o StrictHostKeyChecking=no -i $(minikube ssh-key) manifests/flags/mountme/FLAG.txt docker@$(minikube ip):/home/docker/mountme1/FLAG.txt
+minikube cp --user docker manifests/flags/mountme/FLAG.txt /home/docker/mountme1/FLAG.txt
 
 kubectl apply -f manifests/01_challenges/mountme/job-sa.yaml
 kubectl apply -f manifests/01_challenges/mountme/victim.yaml
@@ -18,7 +18,7 @@ echo "✅ mountme OK"
 
 # mountme2
 minikube ssh -- mkdir -p /home/docker/mountme2
-scp -o StrictHostKeyChecking=no -i $(minikube ssh-key) manifests/flags/mountme2/FLAG.txt docker@$(minikube ip):/home/docker/mountme2/FLAG.txt
+minikube cp --user docker  manifests/flags/mountme2/FLAG.txt /home/docker/mountme2/FLAG.txt
 
 kubectl apply -f manifests/01_challenges/mountme2/job-sa.yaml
 kubectl apply -f manifests/01_challenges/mountme2/victim.yaml
