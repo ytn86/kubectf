@@ -3,7 +3,7 @@
 ## 1. Create a cluster
 
 ```shell
-$ minikube start --driver=virtualbox
+$ minikube start --kubernetes-version=1.21.14 --driver=virtualbox
 ```
 
 ## 2. Setup challenges

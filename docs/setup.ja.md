@@ -3,7 +3,7 @@
 ## 1. クラスタの構築
 
 ```shell
-$ minikube start --driver=virtualbox
+$ minikube start --kubernetes-version=1.21.14
 ```
 
 ## 2. 問題の登録

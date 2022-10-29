@@ -12,7 +12,7 @@ more information [docs/requirements.md](docs/requirements.md)
 # Getting Started
 
 ```shell
-$ minikube start --driver=virtualbox
+$ minikube start --kubernetes-version=1.21.14 --driver=virtualbox
 $ ./setup.sh
 ```
 
